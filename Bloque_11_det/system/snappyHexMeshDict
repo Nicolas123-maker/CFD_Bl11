@@ -37,8 +37,8 @@ geometry
     refinementBox
     {
         type box;
-        min (-1.0 -1.0 0.0);
-        max ( 1.5  1.0 2.0);
+        min (-0.15 -0.1 0.0);
+        max ( 0.3  0.5 0.4);
     }
 };
 
@@ -91,7 +91,7 @@ castellatedMeshControls
     (
         {
            file "Bl11.eMesh";
-           level 2;
+           level 1;
         }
     );
 
@@ -111,7 +111,7 @@ castellatedMeshControls
         Bl11
         {
             //Surface-wise min and max refinement level
-            level (2 3);
+            level (1 2);
         }
     }
 
@@ -137,7 +137,7 @@ castellatedMeshControls
         refinementBox
         {
             mode    inside;
-            level   2;
+            level   1;
         }
     }
 
@@ -150,7 +150,7 @@ castellatedMeshControls
     // section reachable from the insidePoint is kept.
     // NOTE: This point should never be on a face, always inside a cell, even
     // after refinement.
-    insidePoint (3 3 0.43);
+    insidePoint (0.8 0.7 0.1);
 
 
     // Whether any faceZones (as specified in the refinementSurfaces)
